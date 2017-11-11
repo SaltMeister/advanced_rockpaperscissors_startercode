@@ -19,11 +19,9 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
-
-
+var input = $("input").val();
 
 //FUNCTIONS
-
 
 
 // DOCUMENT READY FUNCTION

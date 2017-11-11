@@ -19,10 +19,13 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
-var input = $("input").val();
+
 
 //FUNCTIONS
-
+$("button").click(function() {
+   var input = $("input").val();
+   $("#player_choice").text(input);
+});
 
 // DOCUMENT READY FUNCTION
 

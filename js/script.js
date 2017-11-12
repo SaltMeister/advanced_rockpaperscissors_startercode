@@ -20,7 +20,6 @@
 
 //GLOBAL VARIABLES
 
-
 //FUNCTIONS
 $("button").click(function() {
    var input = $("input").val();

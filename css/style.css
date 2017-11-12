@@ -69,3 +69,13 @@
     height: 300px;
     text-align: center;
 }
+#result {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+#answer {
+    text-align: center;
+}
+.container {
+    background-color: #1e90ff;
+}

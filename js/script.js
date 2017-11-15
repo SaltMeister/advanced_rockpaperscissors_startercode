@@ -25,6 +25,20 @@ $("button").click(function() {
    var input = $("input").val();
    $("#player_choice").text(input);
 });
+// ^Function for inputing choice from input bar.^
+
+// A option to choose in the RPS game from clicking image
+$("#rock").click(function() {
+   $("#player_choice").text("Rock");    
+});
+
+$("#scissor").click(function() {
+   $("#player_choice").text("Scissor");    
+});
+
+$("#paper").click(function() {
+   $("#player_choice").text("Paper");    
+});
 
 // DOCUMENT READY FUNCTION
 

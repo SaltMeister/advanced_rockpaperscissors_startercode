@@ -25,21 +25,33 @@
 //Waits for the Html document to startup before run code    
 $("button").click(function() {
    var input = $("input").val();
-   $("#player_choice").text(input);
+   $("#player_choice").text(input + "!");
+    var choice = ["Rock!" , "Paper!" , "Scissor!"];
+    var math = Math.floor(Math.random() * 3);
+   $("#computer_choice").text(choice[math]);
 });
 // ^Function for inputing choice from input bar.^
 
 // A option to choose in the RPS game from clicking image
 $("#rock").click(function() {
-   $("#player_choice").text("Rock");    
+   $("#player_choice").text("Rock!");
+   var choice = ["Rock!" , "Paper!" , "Scissor!"];
+    var math = Math.floor(Math.random() * 3);
+   $("#computer_choice").text(choice[math]);
 });
 
 $("#scissor").click(function() {
-   $("#player_choice").text("Scissor");    
+   $("#player_choice").text("Scissor!");
+   var choice = ["Rock!" , "Paper!" , "Scissor!"];
+    var math = Math.floor(Math.random() * 3);
+   $("#computer_choice").text(choice[math]);
 });
 
 $("#paper").click(function() {
-   $("#player_choice").text("Paper");    
+   $("#player_choice").text("Paper!");   
+   var choice = ["Rock!" , "Paper!" , "Scissor!"];
+    var math = Math.floor(Math.random() * 3);
+   $("#computer_choice").text(choice[math]);
 });
     });
 // DOCUMENT READY FUNCTION

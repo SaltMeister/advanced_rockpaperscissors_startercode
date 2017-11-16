@@ -40,7 +40,6 @@ $("button").click(function() {
             $("#player_choice").text("I Don't Think You Put in the Choice Properly");
         }
 });
-// ^Function for inputing choice from input bar.^
 
 // A option to choose in the RPS game from clicking image
 $("#rock").click(function() {

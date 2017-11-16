@@ -29,6 +29,16 @@ $("button").click(function() {
     var choice = ["Rock!" , "Paper!" , "Scissor!"];
     var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
+        if(input === "Rock" && math === 2 || input === "Paper" && math === 0 || input === "Scissor" && math === 1) {
+            $("#player_choice").text("YOU WIN!!!");
+        } else if(input === "Rock" && math === 1 || input === "Paper" && math === 2 || input === "Scissor" && math === 0) {
+            $("#player_choice").text("YOU LOSE!!!");
+        } else if(input === "Rock" && math === 0 || input === "Paper" && math === 1 || input === "Scissor" && math === 2) {
+            $("#player_choice").text("YOU TIED!!!");
+        } else {
+            $("#computer_choice").text("No Response");
+            $("#player_choice").text("I Don't Think You Put in the Choice Properly");
+        }
 });
 // ^Function for inputing choice from input bar.^
 

@@ -21,6 +21,8 @@
 //GLOBAL VARIABLES
 
 //FUNCTIONS
+    $(document).ready(function() {
+//Waits for the Html document to startup before run code    
 $("button").click(function() {
    var input = $("input").val();
    $("#player_choice").text(input);
@@ -39,6 +41,6 @@ $("#scissor").click(function() {
 $("#paper").click(function() {
    $("#player_choice").text("Paper");    
 });
-
+    });
 // DOCUMENT READY FUNCTION
 

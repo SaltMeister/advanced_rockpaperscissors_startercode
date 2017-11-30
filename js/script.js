@@ -22,22 +22,31 @@
 
 //FUNCTIONS
     $(document).ready(function() {
+        var win = 0 ;
+        var lose = 0 ;
 //Waits for the Html document to startup before run code    
 $("button").click(function() {
-   var input = $("input").val();
+   var input = $("input").val().toUpperCase();
    $("#player_choice").text(input + "!");
-    var choice = ["Rock!" , "Paper!" , "Scissor!"];
+    var choice = ["ROCK!" , "PAPER!" , "SCISSOR!"];
     var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
-        if(input === "Rock" && math === 2 || input === "Paper" && math === 0 || input === "Scissor" && math === 1) {
-            $("#player_choice").text("YOU WIN!!!");
-        } else if(input === "Rock" && math === 1 || input === "Paper" && math === 2 || input === "Scissor" && math === 0) {
-            $("#player_choice").text("YOU LOSE!!!");
-        } else if(input === "Rock" && math === 0 || input === "Paper" && math === 1 || input === "Scissor" && math === 2) {
-            $("#player_choice").text("YOU TIED!!!");
+        if(input === "ROCK" && math === 2 || input === "PAPER" && math === 0 || input === "SCISSOR" && math === 1) {
+            $("#game_answer").text("YOU WIN!!!");
+            //says updates the score chart
+            win = win + 1;
+            $("#win").text("Wins: " + win);
+            
+        } else if(input === "ROCK" && math === 1 || input === "PAPER" && math === 2 || input === "SCISSOR" && math === 0) {
+            $("#game_answer").text("YOU LOSE!!!");
+             lose = lose + 1;
+            $("#lose").text("Lose: " + lose);
+            
+        } else if(input === "ROCK" && math === 0 || input === "PAPER" && math === 1 || input === "SCISSOR" && math === 2) {
+            $("#game_answer").text("YOU TIED!!!");
         } else {
             $("#computer_choice").text("No Response");
-            $("#player_choice").text("I Don't Think You Put in the Choice Properly");
+            $("#game_answer").text("I Don't Think You Put in the Choice Properly");
         }
 });
 
@@ -49,11 +58,15 @@ $("#rock").click(function() {
     var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
     if(playchoice === "Rock" && math === 2 ) {
-            $("#player_choice").text("YOU WIN!!!");
+            $("#game_answer").text("YOU WIN!!!");
+            win = win + 1;
+            $("#win").text("Wins: " + win);
         } else if(playchoice === "Rock" && math === 1 ) {
-            $("#player_choice").text("YOU LOSE!!!");
+            $("#game_answer").text("YOU LOSE!!!");
+             lose = lose + 1;
+            $("#lose").text("Lose: " + lose);
         } else if(playchoice === "Rock" && math === 0) {
-            $("#player_choice").text("YOU TIED!!!");
+            $("#game_answer").text("YOU TIED!!!");
         }
 });
 
@@ -64,11 +77,15 @@ $("#scissor").click(function() {
     var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
     if(playchoice === "Scissor" && math === 1 ) {
-            $("#player_choice").text("YOU WIN!!!");
+            $("#game_answer").text("YOU WIN!!!");
+            win = win + 1;
+            $("#win").text("Wins: " + win);
         } else if(playchoice === "Scissor" && math === 0) {
-            $("#player_choice").text("YOU LOSE!!!");
+            $("#game_answer").text("YOU LOSE!!!");
+             lose = lose + 1;
+            $("#lose").text("Lose: " + lose);
         } else if(playchoice === "Scissor" && math === 2) {
-            $("#player_choice").text("YOU TIED!!!");
+            $("#game_answer").text("YOU TIED!!!");
         }
    
 });
@@ -80,11 +97,15 @@ $("#paper").click(function() {
     var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
    if(playchoice === "Paper" && math === 0 ) {
-            $("#player_choice").text("YOU WIN!!!");
+            $("#game_answer").text("YOU WIN!!!");
+            win = win + 1;
+            $("#win").text("Wins: " + win);
         } else if(playchoice === "Paper" && math === 2) {
-            $("#player_choice").text("YOU LOSE!!!");
+            $("#game_answer").text("YOU LOSE!!!");
+             lose = lose + 1;
+            $("#lose").text("Lose: " + lose);
         } else if(playchoice === "Paper" && math === 1) {
-            $("#player_choice").text("YOU TIED!!!");
+            $("#game_answer").text("YOU TIED!!!");
         }
 });
     });

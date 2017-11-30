@@ -45,6 +45,7 @@ $("button").click(function() {
         } else if(input === "ROCK" && math === 0 || input === "PAPER" && math === 1 || input === "SCISSOR" && math === 2) {
             $("#game_answer").text("YOU TIED!!!");
         } else {
+            $("#player_choice").text("???????????");
             $("#computer_choice").text("No Response");
             $("#game_answer").text("I Don't Think You Put in the Choice Properly");
         }

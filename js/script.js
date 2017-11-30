@@ -44,23 +44,48 @@ $("button").click(function() {
 // A option to choose in the RPS game from clicking image
 $("#rock").click(function() {
    $("#player_choice").text("Rock!");
+   var playchoice = "Rock";
    var choice = ["Rock!" , "Paper!" , "Scissor!"];
     var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
+    if(playchoice === "Rock" && math === 2 ) {
+            $("#player_choice").text("YOU WIN!!!");
+        } else if(playchoice === "Rock" && math === 1 ) {
+            $("#player_choice").text("YOU LOSE!!!");
+        } else if(playchoice === "Rock" && math === 0) {
+            $("#player_choice").text("YOU TIED!!!");
+        }
 });
 
 $("#scissor").click(function() {
+    var playchoice = "Scissor";
    $("#player_choice").text("Scissor!");
    var choice = ["Rock!" , "Paper!" , "Scissor!"];
     var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
+    if(playchoice === "Scissor" && math === 1 ) {
+            $("#player_choice").text("YOU WIN!!!");
+        } else if(playchoice === "Scissor" && math === 0) {
+            $("#player_choice").text("YOU LOSE!!!");
+        } else if(playchoice === "Scissor" && math === 2) {
+            $("#player_choice").text("YOU TIED!!!");
+        }
+   
 });
 
 $("#paper").click(function() {
+    var playchoice = "Paper";
    $("#player_choice").text("Paper!");   
    var choice = ["Rock!" , "Paper!" , "Scissor!"];
     var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
+   if(playchoice === "Paper" && math === 0 ) {
+            $("#player_choice").text("YOU WIN!!!");
+        } else if(playchoice === "Paper" && math === 2) {
+            $("#player_choice").text("YOU LOSE!!!");
+        } else if(playchoice === "Paper" && math === 1) {
+            $("#player_choice").text("YOU TIED!!!");
+        }
 });
     });
 // DOCUMENT READY FUNCTION

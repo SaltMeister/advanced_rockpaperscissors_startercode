@@ -1,61 +1,6 @@
-.col-sm-1 {
-    background-color:OrangeRed;
-    border: solid;
-}
 
-.col-sm-2 {
-    background-color:SteelBlue  ;
-    border: solid;
-}
-
-.col-sm-3 {
-    background-color:gainsboro ;
-    border: solid;
-}
-
-.col-sm-4 {
-    background-color:LightYellow ;
-    border: solid;
-}
-
-.col-sm-5 {
-    background-color:blue;
-    border: solid;
-}
-
-.col-sm-6 {
-    background-color: LightSalmon ;
-    border: solid;
-}
-
-.col-sm-7 {
-    background-color: brown;
-    border: solid;
-}
-
-.col-sm-8 {
-    background-color:LightSeaGreen ;
-    border: solid;
-}
-
-.col-sm-9 {
-    background-color: honeydew;
-    border: solid;
-}
-
-.col-sm-10 {
-    background-color:lightsalmon;
-    border: solid;
-}
-
-.col-sm-11 {
-    background-color:white;
-    border: solid;
-}
-
-.col-sm-12 {
-    background-color:pink;
-    border: solid;
+body {
+    background-color: #1e90ff;;
 }
 .img {
     width: 200px;
@@ -66,13 +11,20 @@
 .img:hover {
     opacity: 1;
 }
-h2 {
+#title {
     font-size: 40px;
     font-family: Georgia;
+    text-shadow: 5px 5px 2px #1e90ff;
+}
+.result_title {
+    font-size: 40px;
+    font-family: Georgia;
+    text-shadow: 5px 5px 2px #a4ffa4;
 }
 #game {
     text-align: center;
     font-family: Garamond;
+    background-color: #ffa34a;
 }
 .result {
     width: 100%;
@@ -81,21 +33,29 @@ h2 {
 }
 #result {
     text-align: center;
-    padding: 10px 10px 10px 10px;
+    padding: 20px 10px 10px 10px;
     font-size: 25px;
+    margin: 10px;
+    background-color: honeydew;
     
 }
 input {
     margin: 10px 10px 10px 10px;
+    text-align: center;
 }
 #answer {
     font-size: 20px;
     text-align: center;
+    background-color: #ffa34a;
+    
 }
 #score {
     list-style-type: none; 
+    display: inline-block;
+    text-align: center;
 }
 .container {
     background-color: #1e90ff;
     font-family: garamond;
+    text-align: center;
 }

@@ -22,29 +22,36 @@
 
 //FUNCTIONS
     $(document).ready(function() {
+        //variables for the scoreboard
         var win = 0 ;
         var lose = 0 ;
 //Waits for the Html document to startup before run code    
+
+//when you click the input button after putting in a value
 $("button").click(function() {
-   var input = $("input").val().toUpperCase();
+        //makes all inputs uppercase
+        var input = $("input").val().toUpperCase();
    $("#player_choice").text(input + "!");
-    var choice = ["ROCK!" , "PAPER!" , "SCISSOR!"];
-    var math = Math.floor(Math.random() * 3);
+        var choice = ["ROCK!" , "PAPER!" , "SCISSOR!"];
+        //randomizes a random number up to 3
+        var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
         if(input === "ROCK" && math === 2 || input === "PAPER" && math === 0 || input === "SCISSOR" && math === 1) {
             $("#game_answer").text("YOU WIN!!!");
-            //says updates the score chart
+            // updates the score chart
             win = win + 1;
             $("#win").text("Wins: " + win);
             
-        } else if(input === "ROCK" && math === 1 || input === "PAPER" && math === 2 || input === "SCISSOR" && math === 0) {
+      } else if(input === "ROCK" && math === 1 || input === "PAPER" && math === 2 || input === "SCISSOR" && math === 0) {
             $("#game_answer").text("YOU LOSE!!!");
-             lose = lose + 1;
+            // updates the score chart
+            lose = lose + 1;
             $("#lose").text("Lose: " + lose);
             
-        } else if(input === "ROCK" && math === 0 || input === "PAPER" && math === 1 || input === "SCISSOR" && math === 2) {
+      } else if(input === "ROCK" && math === 0 || input === "PAPER" && math === 1 || input === "SCISSOR" && math === 2) {
             $("#game_answer").text("YOU TIED!!!");
-        } else {
+      } else {
+          //A response for non readable answer
             $("#player_choice").text("???????????");
             $("#computer_choice").text("No Response");
             $("#game_answer").text("I Don't Think You Put in the Choice Properly");
@@ -54,58 +61,62 @@ $("button").click(function() {
 // A option to choose in the RPS game from clicking image
 $("#rock").click(function() {
    $("#player_choice").text("Rock!");
-   var playchoice = "Rock";
-   var choice = ["Rock!" , "Paper!" , "Scissor!"];
-    var math = Math.floor(Math.random() * 3);
+        var playchoice = "Rock";
+        var choice = ["Rock!" , "Paper!" , "Scissor!"];
+        //randomizes a random number up to 3
+        var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
-    if(playchoice === "Rock" && math === 2 ) {
+        if(playchoice === "Rock" && math === 2 ) {
             $("#game_answer").text("YOU WIN!!!");
             win = win + 1;
             $("#win").text("Wins: " + win);
-        } else if(playchoice === "Rock" && math === 1 ) {
+      } else if(playchoice === "Rock" && math === 1 ) {
             $("#game_answer").text("YOU LOSE!!!");
-             lose = lose + 1;
+            lose = lose + 1;
             $("#lose").text("Lose: " + lose);
-        } else if(playchoice === "Rock" && math === 0) {
+      } else if(playchoice === "Rock" && math === 0) {
             $("#game_answer").text("YOU TIED!!!");
         }
 });
 
 $("#scissor").click(function() {
-    var playchoice = "Scissor";
+        var playchoice = "Scissor";
    $("#player_choice").text("Scissor!");
-   var choice = ["Rock!" , "Paper!" , "Scissor!"];
-    var math = Math.floor(Math.random() * 3);
+        var choice = ["Rock!" , "Paper!" , "Scissor!"];
+        //randomizes a random number up to 3
+        var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
-    if(playchoice === "Scissor" && math === 1 ) {
+        if(playchoice === "Scissor" && math === 1 ) {
             $("#game_answer").text("YOU WIN!!!");
+            //updates the score counter
             win = win + 1;
             $("#win").text("Wins: " + win);
-        } else if(playchoice === "Scissor" && math === 0) {
+      } else if(playchoice === "Scissor" && math === 0) {
             $("#game_answer").text("YOU LOSE!!!");
-             lose = lose + 1;
+            lose = lose + 1;
             $("#lose").text("Lose: " + lose);
-        } else if(playchoice === "Scissor" && math === 2) {
+      } else if(playchoice === "Scissor" && math === 2) {
             $("#game_answer").text("YOU TIED!!!");
         }
    
 });
 
 $("#paper").click(function() {
-    var playchoice = "Paper";
+        var playchoice = "Paper";
    $("#player_choice").text("Paper!");   
-   var choice = ["Rock!" , "Paper!" , "Scissor!"];
-    var math = Math.floor(Math.random() * 3);
+        var choice = ["Rock!" , "Paper!" , "Scissor!"];
+        //randomizes a random number up to 3
+        var math = Math.floor(Math.random() * 3);
    $("#computer_choice").text(choice[math]);
-   if(playchoice === "Paper" && math === 0 ) {
+        if(playchoice === "Paper" && math === 0 ) {
             $("#game_answer").text("YOU WIN!!!");
             win = win + 1;
             $("#win").text("Wins: " + win);
-        } else if(playchoice === "Paper" && math === 2) {
+      } else if(playchoice === "Paper" && math === 2) {
             $("#game_answer").text("YOU LOSE!!!");
-             lose = lose + 1;
+            lose = lose + 1;
             $("#lose").text("Lose: " + lose);
-        } else if(playchoice === "Paper" && math === 1) {
+      } else if(playchoice === "Paper" && math === 1) {
             $("#game_answer").text("YOU TIED!!!");
         }
 });

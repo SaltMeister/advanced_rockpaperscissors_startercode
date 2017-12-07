@@ -26,28 +26,33 @@
      -->
     <div class="container">
         <div class="row">
+            <!--Title with the images for the player  -->
             <div class="col-sm-12" id="game">
-              <h2>Rock Paper Scissors Game</h2>
+              <h2 id="title">Rock Paper Scissors Game</h2>
               <img src="images/obsidian.png" id="rock" class="img"/>
               <img src="images/cardboard.png" id="paper" class="img"/>
               <img src="images/knife.png" id="scissor" class="img"/>
             </div>
         </div>
+        
+        <!--Choice Display for Player and Computer -->
         <div class="row" id="result">
-                <div class="col-sm-6" class="result">
-                      <h2>Player</h2> 
+                <div class="col-sm-6" class="result" id="result_player">
+                      <h2 class="result_title">Player</h2> 
                       <p id="player_choice">Player</p>
                 </div>
-                <div class="col-sm-6" class="result">
-                      <h2>Computer</h2>
+                <div class="col-sm-6" class="result" id="result_computer">
+                      <h2 class="result_title">Computer</h2>
                       <p id="computer_choice">Computer</p>
                 </div>
         </div>
         <div class="row" id="answer">
             <div class="col-sm-12">
+                 <!--Input Area -->
                  <input placeholder="Enter Choice Here">
                  <button>Submit Answer</button>
-                 <p id="game_answer">Capitalize first letter of choice to get a proper answer or you can just click an image of your choice.</p>
+                 <p id="game_answer">you can just click an image of your choice.</p>
+                 <!--Score board -->
                  <ul id="score">
                      <li id="win">Wins: 0</li>
                      <li id="lose">Lose: 0</li>

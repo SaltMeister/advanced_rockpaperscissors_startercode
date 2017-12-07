@@ -38,18 +38,27 @@ $("button").click(function() {
    $("#computer_choice").text(choice[math]);
         if(input === "ROCK" && math === 2 || input === "PAPER" && math === 0 || input === "SCISSOR" && math === 1) {
             $("#game_answer").text("YOU WIN!!!");
+            $("#game_answer").css({"font-size": "45px", "text-decoration": "underline", "font-family": "Verdana"});
             // updates the score chart
             win = win + 1;
             $("#win").text("Wins: " + win);
+            // changes font of scoreboard
+            $("#win").css("font-family", "Arial Black")
+            $("#lose").css("font-family", "Arial Black")
             
       } else if(input === "ROCK" && math === 1 || input === "PAPER" && math === 2 || input === "SCISSOR" && math === 0) {
+            //stuff that happens when you lose
             $("#game_answer").text("YOU LOSE!!!");
+            $("#game_answer").css({"font-size": "40px", "text-decoration": "underline", "font-family": "Palatino"});
             // updates the score chart
             lose = lose + 1;
             $("#lose").text("Lose: " + lose);
+            $("#win").css("font-family", "Arial Black")
+            $("#lose").css("font-family", "Arial Black")
             
       } else if(input === "ROCK" && math === 0 || input === "PAPER" && math === 1 || input === "SCISSOR" && math === 2) {
             $("#game_answer").text("YOU TIED!!!");
+            $("#game_answer").css({"font-size": "30px", "text-decoration": "underline", "font-family": "tahoma"});
       } else {
           //A response for non readable answer
             $("#player_choice").text("???????????");
@@ -68,14 +77,22 @@ $("#rock").click(function() {
    $("#computer_choice").text(choice[math]);
         if(playchoice === "Rock" && math === 2 ) {
             $("#game_answer").text("YOU WIN!!!");
+
+            $("#game_answer").css({"font-size": "45px", "text-decoration": "underline", "font-family": "Verdana"});
             win = win + 1;
             $("#win").text("Wins: " + win);
+            $("#win").css("font-family", "Arial Black")
+            $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Rock" && math === 1 ) {
             $("#game_answer").text("YOU LOSE!!!");
+             $("#game_answer").css({"font-size": "40px", "text-decoration": "underline", "font-family": "Palatino"});
             lose = lose + 1;
             $("#lose").text("Lose: " + lose);
+            $("#win").css("font-family", "Arial Black")
+            $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Rock" && math === 0) {
             $("#game_answer").text("YOU TIED!!!");
+            $("#game_answer").css({"font-size": "30px", "text-decoration": "underline", "font-family": "tahoma"});
         }
 });
 
@@ -88,15 +105,23 @@ $("#scissor").click(function() {
    $("#computer_choice").text(choice[math]);
         if(playchoice === "Scissor" && math === 1 ) {
             $("#game_answer").text("YOU WIN!!!");
+            $("#game_answer").css({"font-size": "45px", "text-decoration": "underline", "font-family": "Verdana"});
             //updates the score counter
             win = win + 1;
             $("#win").text("Wins: " + win);
+            //changes font family of scoreboard
+            $("#win").css("font-family", "Arial Black")
+            $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Scissor" && math === 0) {
             $("#game_answer").text("YOU LOSE!!!");
+             $("#game_answer").css({"font-size": "40px", "text-decoration": "underline", "font-family": "Palatino"});
             lose = lose + 1;
             $("#lose").text("Lose: " + lose);
+            $("#win").css("font-family", "Arial Black")
+            $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Scissor" && math === 2) {
             $("#game_answer").text("YOU TIED!!!");
+            $("#game_answer").css({"font-size": "30px", "text-decoration": "underline", "font-family": "tahoma"});
         }
    
 });
@@ -110,14 +135,22 @@ $("#paper").click(function() {
    $("#computer_choice").text(choice[math]);
         if(playchoice === "Paper" && math === 0 ) {
             $("#game_answer").text("YOU WIN!!!");
+            $("#game_answer").css({"font-size": "45px", "text-decoration": "underline", "font-family": "Verdana"});
             win = win + 1;
             $("#win").text("Wins: " + win);
+            //changes font family of the scoreboard
+            $("#win").css("font-family", "Arial Black")
+            $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Paper" && math === 2) {
             $("#game_answer").text("YOU LOSE!!!");
+             $("#game_answer").css({"font-size": "40px", "text-decoration": "underline", "font-family": "Palatino"});
             lose = lose + 1;
             $("#lose").text("Lose: " + lose);
+            $("#win").css("font-family", "Arial Black")
+            $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Paper" && math === 1) {
             $("#game_answer").text("YOU TIED!!!");
+            $("#game_answer").css({"font-size": "30px", "text-decoration": "underline", "font-family": "tahoma"});
         }
 });
     });

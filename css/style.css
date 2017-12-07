@@ -2,6 +2,7 @@
 body {
     background-color: #1e90ff;;
 }
+
 .img {
     width: 200px;
     margin: 20px 20px 20px 20px;
@@ -13,13 +14,19 @@ body {
 }
 #title {
     font-size: 40px;
-    font-family: Georgia;
-    text-shadow: 5px 5px 2px #1e90ff;
+    font-family: 'Source Code Pro';
+    text-shadow: 2px 2px 6px #1e90ff;
 }
 .result_title {
     font-size: 40px;
-    font-family: Georgia;
-    text-shadow: 5px 5px 2px #a4ffa4;
+     font-family: 'Source Code Pro';
+    text-shadow: 2px 2px 6px #a4ffa4;
+}
+#player_choice {
+     font-family: 'Source Code Pro';
+}
+#computer_choice {
+     font-family: 'Source Code Pro';
 }
 #game {
     text-align: center;
@@ -42,6 +49,15 @@ body {
 input {
     margin: 10px 10px 10px 10px;
     text-align: center;
+     font-family: 'Source Code Pro';
+}
+button {
+     font-family: 'Source Code Pro';
+     -webkit-transition: background-color 0.7s, box-shadow 0.6s ;
+}
+button:hover {
+    background-color: #1e90ff ;
+    box-shadow: 5px 5px 5px honeydew ;
 }
 #answer {
     font-size: 20px;
@@ -55,7 +71,7 @@ input {
     text-align: center;
 }
 .container {
-    background-color: #1e90ff;
+    background-color: #1e90ff ;
     font-family: garamond;
     text-align: center;
 }

@@ -22,10 +22,53 @@
 
 //FUNCTIONS
     $(document).ready(function() {
+        //Hides the winner text for the end of the game
+        $("#replay").hide();
+        $(".win_container").hide();
         //variables for the scoreboard
         var win = 0 ;
         var lose = 0 ;
 //Waits for the Html document to startup before run code    
+function winGame() {
+    //displays winner
+            $(".container").hide();
+            //displays content
+            $("#winner_text").text("The Player has WON the game!!");
+            $("#winner").css("background-color", "#ffa34a");
+            $("#replay").show();
+            $(".win_container").show();
+            //lets player know the score
+            $("#final_score").text("You Won" +" "+ win +" "+ "games and Lost" +" "+ lose +" "+"games");
+            win = win - 10;
+            lose = lose - lose;
+            //resets the game score ^ v
+            $("#win").text("Wins: " + win);
+            $("#lose").text("Lose: " + lose);
+}
+function loseGame() {
+    //displays winner
+            $(".container").hide();
+            //hides content
+            $("#picture_text").hide();
+            $(".win_reward").hide();
+            //displays content
+            $("#winner_text").text("The Computer has WON the game!!");
+            $("#winner").css("background-color", "#ffa34a");
+            $("#replay").text("Try Again");
+            $("#replay").show();
+            $(".win_container").show();
+            //lets player know the score
+             $("#final_score").text("The Computer Won" +" "+ lose +" "+ "games and Lost" +" "+ win +" "+"games");
+            lose = lose - 10;
+            win = win - win;
+            //resets the game score ^ v
+            $("#win").text("Wins: " + win);
+            $("#lose").text("Lose: " + lose);
+            
+}
+
+
+
 
 //when you click the input button after putting in a value
 $("button").click(function() {
@@ -53,6 +96,7 @@ $("button").click(function() {
             // updates the score chart
             lose = lose + 1;
             $("#lose").text("Lose: " + lose);
+            // changes font of scoreboard
             $("#win").css("font-family", "Arial Black")
             $("#lose").css("font-family", "Arial Black")
             
@@ -64,6 +108,12 @@ $("button").click(function() {
             $("#player_choice").text("???????????");
             $("#computer_choice").text("No Response");
             $("#game_answer").text("I Don't Think You Put in the Choice Properly");
+        }
+        //end game 
+         if(win === 10) {
+           winGame();
+      } else if(lose === 10) {
+           loseGame();
         }
 });
 
@@ -81,6 +131,7 @@ $("#rock").click(function() {
             $("#game_answer").css({"font-size": "45px", "text-decoration": "underline", "font-family": "Verdana"});
             win = win + 1;
             $("#win").text("Wins: " + win);
+            // changes font of scoreboard
             $("#win").css("font-family", "Arial Black")
             $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Rock" && math === 1 ) {
@@ -88,12 +139,20 @@ $("#rock").click(function() {
              $("#game_answer").css({"font-size": "40px", "text-decoration": "underline", "font-family": "Palatino"});
             lose = lose + 1;
             $("#lose").text("Lose: " + lose);
+            // changes font of scoreboard
             $("#win").css("font-family", "Arial Black")
             $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Rock" && math === 0) {
             $("#game_answer").text("YOU TIED!!!");
             $("#game_answer").css({"font-size": "30px", "text-decoration": "underline", "font-family": "tahoma"});
         }
+          //end game 
+         if(win === 10) {
+           winGame();
+      } else if(lose === 10) {
+           loseGame();
+        }
+        
 });
 
 $("#scissor").click(function() {
@@ -117,13 +176,19 @@ $("#scissor").click(function() {
              $("#game_answer").css({"font-size": "40px", "text-decoration": "underline", "font-family": "Palatino"});
             lose = lose + 1;
             $("#lose").text("Lose: " + lose);
+            // changes font of scoreboard
             $("#win").css("font-family", "Arial Black")
             $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Scissor" && math === 2) {
             $("#game_answer").text("YOU TIED!!!");
             $("#game_answer").css({"font-size": "30px", "text-decoration": "underline", "font-family": "tahoma"});
         }
-   
+          //end game 
+         if(win === 10) {
+           winGame();
+      }  else if(lose === 10) {
+           loseGame();
+        }
 });
 
 $("#paper").click(function() {
@@ -146,13 +211,29 @@ $("#paper").click(function() {
              $("#game_answer").css({"font-size": "40px", "text-decoration": "underline", "font-family": "Palatino"});
             lose = lose + 1;
             $("#lose").text("Lose: " + lose);
+            // changes font of scoreboard
             $("#win").css("font-family", "Arial Black")
             $("#lose").css("font-family", "Arial Black")
       } else if(playchoice === "Paper" && math === 1) {
             $("#game_answer").text("YOU TIED!!!");
             $("#game_answer").css({"font-size": "30px", "text-decoration": "underline", "font-family": "tahoma"});
         }
+           //end game 
+         if(win === 10) {
+           winGame();
+      }  else if(lose === 10) {
+           loseGame();
+        }
+ 
 });
-    });
+    $("#replay").click(function() {
+      $(".container").show();
+      $(".win_container").hide();
+      $("#game_answer").text("You Know how the Game goes");
+      $("#game_answer").css({"font-family": "garamond", "font-size": "20px", "text-decoration": "none"});
+    }
+
+     );
 // DOCUMENT READY FUNCTION
 
+ });

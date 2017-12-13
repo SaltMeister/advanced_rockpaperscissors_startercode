@@ -53,7 +53,7 @@
                  <!--Input Area -->
                  <input placeholder="Enter Choice Here">
                  <button>Submit Answer</button>
-                 <p id="game_answer">You can just click an image of your choice.</p>
+                 <p id="game_answer">You can just click an image of your choice. The Goal is 10 Wins</p>
                  <!--Score board -->
                  <ul id="score">
                      <li id="win"><strong>Wins: 0</strong></li>
@@ -61,10 +61,22 @@
                  </ul>
             </div>
         </div>
-      
-    
      </div>
-
+     <div class="win_container">
+             <div class="row" id="winner">
+                 <div class="col-sm-12">
+                     <h1 id="winner_text"></h1>
+                     <button id="replay">Play Again</button>
+                     <p id="final_score"></p>
+                     <p id="picture_text">Also, here are some pictures :^)</p>
+                 </div>
+                 <div class="col-sm-12">
+                     <img src="images/cat.jpg" id="cat" class="win_reward">
+                     <img src="images/pepe.jpg" id="pepe" class="win_reward">
+                 </div>
+                 
+            </div>
+     </div>
   </body>
 
 </html>

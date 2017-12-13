@@ -39,7 +39,7 @@ function winGame() {
             $(".win_container").show();
             //lets player know the score
             $("#final_score").text("You Won" +" "+ win +" "+ "games and Lost" +" "+ lose +" "+"games");
-            win = win - 10;
+            win = win - win;
             lose = lose - lose;
             //resets the game score ^ v
             $("#win").text("Wins: " + win);
@@ -59,7 +59,7 @@ function loseGame() {
             $(".win_container").show();
             //lets player know the score
              $("#final_score").text("The Computer Won" +" "+ lose +" "+ "games and Lost" +" "+ win +" "+"games");
-            lose = lose - 10;
+            lose = lose - lose;
             win = win - win;
             //resets the game score ^ v
             $("#win").text("Wins: " + win);

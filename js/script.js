@@ -71,7 +71,7 @@ function loseGame() {
 
 
 //when you click the input button after putting in a value
-$("button").click(function() {
+$("#submit").click(function() {
         //makes all inputs uppercase
         var input = $("input").val().toUpperCase();
    $("#player_choice").text(input + "!");
